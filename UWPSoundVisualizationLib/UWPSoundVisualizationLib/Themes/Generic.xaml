@@ -1,0 +1,43 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:album="using:UWPSoundVisualizationLib.Album_Art_Display"
+    xmlns:dClock="using:UWPSoundVisualizationLib.Digital_Clock"
+    xmlns:local="using:UWPSoundVisualizationLib">
+
+    <Style TargetType="album:AlbumArtDisplay">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="album:AlbumArtDisplay">
+                    <Grid>
+                        <Image
+                            Name="PART_AlbumArt"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="dClock:DigitalClock">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="dClock:DigitalClock">
+                    <Grid>
+                        <Border
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            CornerRadius="5">
+                            <TextBlock
+                            <TextBlock
+                                x:Name="seconds"
+                                HorizontalAlignment="Stretch"
+                                VerticalAlignment="Center" />
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
